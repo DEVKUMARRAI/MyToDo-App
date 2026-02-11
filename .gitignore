@@ -17,6 +17,9 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Environment variables
+**/.env
+
 # Visual Studio
 .vs/
 *.suo
