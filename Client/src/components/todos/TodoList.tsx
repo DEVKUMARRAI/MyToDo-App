@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Todo, CreateTodoDto, UpdateTodoDto } from '@/types/todo';
+import type { Todo, CreateTodoDto } from '@/types/todo';
 import { getAllTodos, createTodo, updateTodo, deleteTodo } from '@/services/todoService';
 import { TodoItem } from './TodoItem';
 import { AddTodoForm } from './AddTodoForm';
