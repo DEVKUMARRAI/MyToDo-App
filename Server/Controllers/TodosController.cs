@@ -42,7 +42,7 @@ public class TodosController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateTodo(int id, Todo todo)
+    public async Task<ActionResult<Todo>> UpdateTodo(int id, Todo todo)
     {
         if (id != todo.Id)
         {
@@ -60,7 +60,7 @@ public class TodosController : ControllerBase
         toUpdate.IsCompleted = todo.IsCompleted;
         await _context.SaveChangesAsync();
 
-        return NoContent();
+        return Ok(toUpdate);
     }
 
     [HttpDelete("{id}")]

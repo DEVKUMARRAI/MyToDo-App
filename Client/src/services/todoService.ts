@@ -25,8 +25,8 @@ export const createTodo = async (newTodo: CreateTodoDto): Promise<Todo> => {
     return response.data;
 }
 
-export const updateTodo = async (id: number, updatedTodo: UpdateTodoDto): Promise<Todo> => {
-    const response = await api.put<Todo>(`/todos/${id}`, updatedTodo);
+export const updateTodo = async (id: number, todo: Todo): Promise<Todo> => {
+    const response = await api.put<Todo>(`/todos/${id}`, todo);
     return response.data;
 }
 
